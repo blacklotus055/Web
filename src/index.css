@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Tangerine:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Tangerine", cursive;
+}
+
+body {
+  background:
+    linear-gradient(rgba(10,20,40,0.85), rgba(10,20,40,0.85)),
+    url('https://images.unsplash.com/photo-1502700807168-484a3e7889d0?w=1600&auto=format&fit=crop&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f2e7;
+  min-height: 100vh;
+}
+
+/* Custom shadow classes to match the original design's "raised" effect */
+.btn-gold {
+  @apply bg-linear-to-br from-[#E6C35C] to-[#C9A227] border-2 border-[#D4AF37] text-[#142b45] font-bold py-3 px-6 rounded-full transition-all duration-300;
+  box-shadow: 0 8px 0 #8c6d1f, 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.btn-gold:hover {
+  @apply -translate-y-1.5 shadow-[0_12px_0_#8c6d1f,0_20px_40px_rgba(0,0,0,0.7),0_0_35px_#FFD700];
+}
+
+.btn-gold:active {
+  @apply translate-y-1 shadow-[0_4px_0_#8c6d1f,0_8px_15px_rgba(0,0,0,0.6)];
+}
+
+.card-legal {
+  @apply relative rounded-2xl overflow-hidden border-2 border-[#D4AF37] transition-all duration-300 cursor-pointer;
+  box-shadow: 0 10px 0 #8c6d1f, 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card-legal:hover {
+  @apply -translate-y-2 shadow-[0_14px_0_#8c6d1f,0_25px_50px_rgba(0,0,0,0.7),0_0_30px_#FFD700];
+}
+
+.card-legal:active {
+  @apply translate-y-1 shadow-[0_5px_0_#8c6d1f,0_10px_20px_rgba(0,0,0,0.6)];
+}
+
+.glass-box {
+  @apply bg-[#142b45]/90 border-2 border-[#D4AF37] rounded-3xl p-8 text-center;
+  box-shadow: 0 0 25px rgba(212,175,55,0.4);
+}
